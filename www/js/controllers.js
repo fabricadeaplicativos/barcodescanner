@@ -16,7 +16,10 @@ angular.module('qrscanner.controllers', ['ionic', 'ngCordova'])
 				      toolbar: 'no'
 				    };
 
-					$cordovaInAppBrowser.open('http://54.186.44.11:43000/', '_blank', options);
+
+				    alert('go to ' + JSON.stringify(result.text));
+
+					$cordovaInAppBrowser.open(result.text, '_blank', options);
 				}, function(error) {
 					alert("Error: " + error);
 				});
